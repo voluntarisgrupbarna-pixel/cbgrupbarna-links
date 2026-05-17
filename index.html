@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#D70D24">
+<title>CB Grup Barna · Enllaços</title>
+<meta name="description" content="CB Grup Barna · Bàsquet base al Clot, Districte Sant Martí, Barcelona. Inscripcions, Campus 26 i 3x3 Westfield Glòries.">
+<meta property="og:title" content="CB Grup Barna">
+<meta property="og:description" content="34 equips · 450 socis/es · 60 anys de bàsquet base al Clot">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23D70D24'/%3E%3Cpath d='M50 5v90M5 50h90M16 16l68 68M84 16L16 84' stroke='%230A0A0A' stroke-width='4' fill='none'/%3E%3C/svg%3E">
+
+<style>
+  :root {
+    --red: #D70D24;
+    --red-dark: #8B0712;
+    --black: #0A0A0A;
+    --gray: #1A1A1A;
+    --gray-2: #262626;
+    --border: rgba(255,255,255,0.10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", Roboto, sans-serif;
+    background: var(--black);
+    color: white;
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 15% 0%, rgba(215,13,36,0.18) 0%, transparent 45%),
+      radial-gradient(circle at 85% 100%, rgba(215,13,36,0.10) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 28px 18px 56px;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    padding: 16px 0 24px;
+  }
+
+  .logo {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 52px;
+    box-shadow: 0 12px 40px rgba(215,13,36,0.45), inset 0 -4px 8px rgba(0,0,0,0.2);
+    border: 3px solid white;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+  }
+
+  .tagline {
+    font-size: 14px;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 18px;
+  }
+
+  .stats {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: var(--gray);
+    border: 1px solid var(--border);
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  .stats strong { color: var(--red); font-weight: 800; }
+  .stats .dot { color: rgba(255,255,255,0.3); }
+
+  /* PRIMARY CTAs */
+  .primary-section { margin-top: 28px; }
+
+  .cta-primary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+    color: white;
+    padding: 18px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(215,13,36,0.28);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .cta-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+
+  .cta-primary:hover, .cta-primary:active {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(215,13,36,0.45);
+  }
+  .cta-primary:hover::after { transform: translateX(100%); }
+
+  .cta-icon {
+    font-size: 28px;
+    width: 48px;
+    height: 48px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cta-content { flex: 1; min-width: 0; }
+  .cta-title { display: block; font-size: 17px; font-weight: 800; line-height: 1.25; }
+  .cta-sub { display: block; font-size: 13px; font-weight: 500; opacity: 0.85; margin-top: 2px; }
+  .cta-arrow { font-size: 22px; opacity: 0.8; flex-shrink: 0; }
+
+  /* URGENT badge with pulse */
+  .urgent {
+    animation: pulseGlow 2.4s ease-in-out infinite;
+  }
+  .urgent .badge {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: white;
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 900;
+    padding: 3px 8px;
+    border-radius: 999px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 4px 20px rgba(215,13,36,0.28); }
+    50% { box-shadow: 0 4px 28px rgba(215,13,36,0.65), 0 0 0 4px rgba(215,13,36,0.15); }
+  }
+
+  /* SECONDARY links */
+  .section-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    margin: 28px 0 12px;
+    padding-left: 4px;
+  }
+
+  .cta-secondary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--gray);
+    color: white;
+    padding: 14px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-bottom: 8px;
+    border: 1px solid var(--border);
+    transition: background 0.2s, transform 0.2s, border-color 0.2s;
+  }
+
+  .cta-secondary:hover, .cta-secondary:active {
+    background: var(--gray-2);
+    border-color: rgba(215,13,36,0.4);
+    transform: translateX(4px);
+  }
+
+  .cta-secondary .cta-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background: rgba(215,13,36,0.18);
+  }
+
+  .cta-secondary .cta-title { font-size: 15px; font-weight: 700; }
+
+  /* SOCIAL row */
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gray);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.2s;
+    color: white;
+  }
+
+  .social-btn svg { width: 22px; height: 22px; fill: currentColor; }
+  .social-btn:hover {
+    background: var(--red);
+    transform: translateY(-3px) scale(1.05);
+    border-color: var(--red);
+  }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.42);
+  }
+
+  .hashtag {
+    display: inline-block;
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  /* Reduce motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .urgent { animation: none; }
+    .cta-primary::after { display: none; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="header">
+    <div class="logo" aria-hidden="true">🏀</div>
+    <h1>CB Grup Barna</h1>
+    <p class="tagline">Bàsquet base al Clot · Sant Martí, Barcelona</p>
+    <div class="stats">
+      <span><strong>34</strong> equips</span>
+      <span class="dot">·</span>
+      <span><strong>450</strong> socis</span>
+      <span class="dot">·</span>
+      <span><strong>60</strong> anys</span>
+    </div>
+  </header>
+
+  <main class="primary-section">
+
+    <a href="https://wa.me/34698425153?text=Hola!%20Vull%20fer%20una%20prova%20gratis%20al%20CB%20Grup%20Barna.%20Codi:%20CAMPUS_LINKBIO_PROVA" target="_blank" rel="noopener" class="cta-primary">
+      <div class="cta-icon">🏀</div>
+      <div class="cta-content">
+        <span class="cta-title">Vine a entrenar gratis</span>
+        <span class="cta-sub">Reserva una prova sense compromís</span>
+      </div>
+      <span class="cta-arrow">→</span>
+    </a>
+
+    <a href="https://wa.me/34698425153?text=Hola!%20Vull%20info%20del%20Campus%20Time%20Chamber%20Estiu%2026.%20Codi:%20CAMPUS_LINKBIO_CAMPUS" target="_blank" rel="noopener" class="cta-primary urgent">
+      <span class="badge">Places obertes</span>
+      <div class="cta-icon">☀️</div>
+      <div class="cta-content">
+        <span class="cta-title">Campus 26</span>
+        <span class="cta-sub">Inscripcions obertes · juliol 2026</span>
+      </div>
+      <span class="cta-arrow">→</span>
+    </a>
+
+    <a href="https://voluntarisgrupbarna-pixel.github.io/3x3-westfield-grupbarna-timechamber/" class="cta-primary">
+      <div class="cta-icon">🏆</div>
+      <div class="cta-content">
+        <span class="cta-title">3x3 Westfield Glòries</span>
+        <span class="cta-sub">Apunta't al torneig</span>
+      </div>
+      <span class="cta-arrow">→</span>
+    </a>
+
+  </main>
+
+  <section>
+    <h2 class="section-title">Més info</h2>
+
+    <a href="https://www.cbgrupbarna.cat" class="cta-secondary">
+      <div class="cta-icon">🌐</div>
+      <div class="cta-content"><span class="cta-title">Web del club</span></div>
+      <span class="cta-arrow">→</span>
+    </a>
+
+    <a href="https://wa.me/34698425153?text=Hola!%20Vull%20info%20del%20CB%20Grup%20Barna.%20Codi:%20LINKBIO_GENERAL" target="_blank" rel="noopener" class="cta-secondary">
+      <div class="cta-icon">💬</div>
+      <div class="cta-content"><span class="cta-title">WhatsApp · Pregunta'ns</span></div>
+      <span class="cta-arrow">→</span>
+    </a>
+
+    <a href="mailto:info@cbgrupbarna.cat" class="cta-secondary">
+      <div class="cta-icon">📧</div>
+      <div class="cta-content"><span class="cta-title">info@cbgrupbarna.cat</span></div>
+      <span class="cta-arrow">→</span>
+    </a>
+
+    <a href="https://www.instagram.com/cbgrupbarna/p/DXrdqL5iIlT/" class="cta-secondary">
+      <div class="cta-icon">🤝</div>
+      <div class="cta-content"><span class="cta-title">Vols ser voluntari/a?</span></div>
+      <span class="cta-arrow">→</span>
+    </a>
+  </section>
+
+  <div class="socials" aria-label="Xarxes socials">
+    <a href="https://www.instagram.com/cbgrupbarna/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.05 1.8.24 2.2.4.6.2 1 .5 1.4 1 .5.4.8.8 1 1.4.2.4.4 1 .4 2.2.07 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.05 1.2-.24 1.8-.4 2.2-.2.6-.5 1-1 1.4-.4.5-.8.8-1.4 1-.4.2-1 .4-2.2.4-1.2.07-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.05-1.8-.24-2.2-.4-.6-.2-1-.5-1.4-1-.5-.4-.8-.8-1-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.05-1.2.24-1.8.4-2.2.2-.6.5-1 1-1.4.4-.5.8-.8 1.4-1 .4-.2 1-.4 2.2-.4 1.2-.07 1.6-.07 4.8-.07zm0 2c-3.1 0-3.5 0-4.7.05-1 .05-1.6.2-2 .4-.5.2-.8.4-1.2.7-.3.3-.5.7-.7 1.2-.2.4-.3 1-.4 2C3 9.5 3 9.9 3 13s0 3.5.05 4.7c.05 1 .2 1.6.4 2 .2.5.4.8.7 1.2.3.3.7.5 1.2.7.4.2 1 .3 2 .4 1.2.05 1.6.05 4.7.05s3.5 0 4.7-.05c1-.05 1.6-.2 2-.4.5-.2.8-.4 1.2-.7.3-.3.5-.7.7-1.2.2-.4.3-1 .4-2 .05-1.2.05-1.6.05-4.7s0-3.5-.05-4.7c-.05-1-.2-1.6-.4-2-.2-.5-.4-.8-.7-1.2-.3-.3-.7-.5-1.2-.7-.4-.2-1-.3-2-.4C15.5 4.2 15.1 4.2 12 4.2zm0 3.4a4.4 4.4 0 110 8.8 4.4 4.4 0 010-8.8zm0 2a2.4 2.4 0 100 4.8 2.4 2.4 0 000-4.8zm5-2.6a1.05 1.05 0 110 2.1 1.05 1.05 0 010-2.1z"/></svg>
+    </a>
+    <a href="https://www.tiktok.com/@cbgrupbarna" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M16.6 5.8c-1-.6-1.6-1.7-1.7-2.8h-2.4v11.6c0 1.5-1.2 2.6-2.6 2.6-1.5 0-2.6-1.2-2.6-2.6 0-1.5 1.2-2.6 2.6-2.6.3 0 .6 0 .8.1V9.5c-.3 0-.5-.1-.8-.1C7 9.4 4.4 12 4.4 14.6S7 19.8 9.9 19.8s5.5-2.4 5.5-5.4V8.7c1.1.8 2.4 1.2 3.8 1.2V7.5c-1 0-2-.6-2.6-1.7z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/cbgrupbarna" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H8v-2.9h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.6.7-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg>
+    </a>
+    <a href="https://www.youtube.com/@cbgrupbarna" class="social-btn" aria-label="YouTube" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M23 7.2s-.2-1.6-.9-2.3c-.9-.9-1.8-.9-2.3-1C16.6 3.6 12 3.6 12 3.6s-4.6 0-7.8.2c-.5.1-1.4.1-2.3 1-.7.7-.9 2.3-.9 2.3S0 9 0 10.8v1.6c0 1.8.2 3.6.2 3.6s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.8.2 7.8.2s4.6 0 7.8-.2c.5-.1 1.4-.1 2.3-1 .7-.7.9-2.3.9-2.3s.2-1.8.2-3.6v-1.6c0-1.8-.2-3.6-.2-3.6zM9.5 14.6V8.4l6 3.1-6 3.1z"/></svg>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <p class="hashtag">#SOMCLOT</p>
+    <p>© 2026 CB Grup Barna · Districte Sant Martí, Barcelona</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
