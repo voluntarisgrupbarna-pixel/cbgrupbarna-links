@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://linksbio.cbgrupbarna.info/sitemap.xml
